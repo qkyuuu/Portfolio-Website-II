@@ -1,0 +1,337 @@
+:root {
+  --red-orange: #ff4c29;
+  --bgcolor: #082032;
+  --dark-blue: #2c394b;
+  --dark-blue-gray: #334756;
+}
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: sans-serif;
+}
+@font-face {
+  font-family: Big Shoulder;
+  src: url(fonts/Big_Shoulders_Text/static/BigShouldersText-Regular.ttf);
+}
+@font-face {
+  font-family: Fjalla;
+  src: url(fonts/Fjalla_One/FjallaOne-Regular.ttf);
+}
+@font-face {
+  font-family: Bebas;
+  src: url(fonts/Bebas_Neue/BebasNeue-Regular.ttf);
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  background-color: var(--bgcolor);
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 20px;
+  border-right: 1px solid var(--red-orange);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+  background-color: var(--bgcolor);
+}
+nav .my-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 32px;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vh;
+  padding-left: 0;
+  list-style: none;
+}
+nav ul li a {
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+  transition: opacity 1s ease;
+  position: relative;
+}
+nav ul li a::after {
+  content: attr(data-title);
+  background-color: var(--dark-blue);
+  padding: 10px;
+  width: 100px;
+  border-radius: 5px;
+  position: absolute;
+  margin-left: 10px;
+  font-size: 1rem;
+  text-align: center;
+  font-family: Big Shoulder;
+  opacity: 0;
+  transition: all 0.7s ease;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+nav ul li a.active,
+nav ul li a:hover {
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+.nav-icon-fill {
+  display: none;
+}
+nav ul li a img {
+  width: 32px;
+}
+
+/* Hero Wrapper */
+.hero-wrapper {
+  height: 100vh;
+  width: 100vw;
+  padding: 0 200px 0 300px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.hero-wrapper * {
+  /* outline: 1px solid white; */
+}
+.left-hero-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 300px;
+}
+.left-hero-panel h1 {
+  font-size: clamp(2.2rem, 2vw + 0.5rem, 3rem);
+}
+.left-hero-panel h1 span {
+  color: var(--red-orange);
+}
+.left-hero-panel p {
+  font-size: clamp(0.8rem, 1vw + 0.5rem, 1.2rem);
+}
+.left-hero-panel .social-media-container {
+  display: flex;
+  gap: 25px;
+}
+.hero-wrapper .my-bg-pic {
+  width: 50%;
+  object-fit: contain;
+}
+.bgpic-container {
+  position: absolute;
+  right: 5%;
+  background-color: var(--red-orange);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  /* box-shadow: -10px 0px 15px rgba(0, 0, 0, 0.2), 10px 0px 15px rgba(0, 0, 0, 0.2); */
+}
+.bgpic-container img {
+  height: 100vh;
+}
+.moving-text {
+  color: var(--red-orange);
+  position: absolute;
+  bottom: 5%;
+  font-size: clamp(4rem, 9vw + 0.5rem, 12rem);
+  font-family: Bebas;
+  animation: move 15s infinite linear;
+  white-space: nowrap;
+}
+@keyframes move {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.container {
+  padding-left: 6vw !important;
+}
+.grid-col-span-2 {
+  grid-column: span 2;
+}
+.grid-col-span-3 {
+  grid-column: span 3;
+}
+.grid-col-span-4 {
+  grid-column: span 4;
+}
+.projects-div {
+  padding: 80px 0;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+.projects * {
+  outline: 1px solid white;
+}
+.project-container {
+  border-radius: 25px;
+  /* background-color: white; */
+}
+/* PROJECT GENERAL STYLING */
+.cbnasia-project,
+.alumni-project {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.cbnasia-text-container h1,
+.alumni-text-container h1 {
+  background-color: var(--bgcolor);
+  color: white;
+  padding: 5px 20px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+/* CBN ASIA */
+.cbnasia-project {
+  gap: 1.5rem;
+  background-color: var(--red-orange);
+  padding: 50px;
+}
+.cbnasia-project .cbnasia-text-container{
+  align-self: center;
+}
+.cbnasia-project .img-container{
+  position: relative;
+  display: grid;
+}
+.cbnasia-project .img-container img{
+  width: 500px;
+}
+.cbnasia-project .img-container .laptop{
+  align-self: end;
+  position: absolute;
+  bottom: 0;
+}
+.cbnasia-project .img-container .smartphone {
+  width: 200px;
+  justify-self: end;
+  z-index: 1;
+}
+/* ALUMNI */
+.alumni-project {
+}
+.alumni-project img{
+  width: 100%;
+  border-radius: 25px;
+}
+.alumni-project .alumni-text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 25px;
+  padding: 30px;
+  background-color: var(--dark-blue-gray);
+  text-align: end;
+}
+/* SAMPLE PROJECTS */
+.sample-projects{
+}
+.sample-projects-title {
+  background-color: var(--red-orange);
+  padding: 20px;
+  font-size: 2rem;
+  border-radius: 25px;
+}
+.sample-projects img{
+  width: 100%;
+  border-radius: 25px;
+}
+/* Main Footer */
+footer{
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-first-row{
+  display: flex;
+  gap: 1.5rem;
+}
+footer .footer-first-row img{
+  width: 150px;
+  object-fit: contain;
+}
+footer .footer-first-row p{
+  font-size: clamp(2rem, 4vw + 0.5rem, 6rem);
+  line-height: 6rem;
+}
+.footer-button-row button{
+  background-color: var(--red-orange);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+}
+/* 
+.cbnasia-project {
+  background-color: var(--red-orange);
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.6fr;
+  padding: 5vw;
+}
+.cbnasia-text-container {
+  align-self: center;
+}
+.cbnasia-text-container h1,
+.alumni-text-container h1 {
+  background-color: var(--bgcolor);
+  color: white;
+  padding: 5px 20px;
+  font-size: 1.5rem;
+}
+.laptop {
+  width: 100%;
+  align-self: end;
+}
+.smartphone {
+  width: 100%;
+  align-self: end;
+  object-fit: contain;
+}
+
+.alumni-project {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  gap: 5vw;
+  margin-top: 50px;
+}
+.alumni-project img {
+  border-radius: 25px;
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+}
+.alumni-text-container {
+  background-color: var(--dark-blue-gray);
+  padding: 50px;
+  border-radius: 25px;
+  text-align: end;
+  align-self: flex-end;
+  width: 35%;
+  height: 100%;
+} */
+
+@media screen and (max-width: 768px) {
+  .cbnasia-project {
+    grid-template-columns: 1fr;
+  }
+}

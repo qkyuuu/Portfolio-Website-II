@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="img/qq-logo.png" alt="" class="my-logo" />
+      <ul>
+        <li>
+          <a href="#" data-title="HOME" class="active">
+            <img
+              src="img/icons/navbar-icons/home.png"
+              alt=""
+              class="nav-icon home"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#" data-title="ABOUT ME">
+            <img
+              src="img/icons/navbar-icons/about-me.png"
+              alt=""
+              class="nav-icon about-me"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#" data-title="PROJECTS">
+            <img
+              src="img/icons/navbar-icons/projects.png"
+              alt=""
+              class="nav-icon projects"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#" data-title="MESSAGE">
+            <img
+              src="img/icons/navbar-icons/chat.png"
+              alt=""
+              class="nav-icon message"
+            />
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hero-wrapper">
+      <div class="left-hero-panel">
+        <h1>I <span>develop</span> <span>design</span> website</h1>
+        <p>
+          I transform ideas into digital reality, weaving innovation and
+          creativity<br />
+          to craft engaging and immersive digital experiences.
+        </p>
+        <div class="social-media-container">
+          <a href=""><img src="img/icons/linkedin.png" alt="" /></a>
+          <a href=""><img src="img/icons/instagram.png" alt="" /></a>
+          <a href=""><img src="img/icons/gmail.png" alt="" /></a>
+          <a href=""><img src="img/icons/facebook.png" alt="" /></a>
+          <a href=""><img src="img/icons/github.png" alt="" /></a>
+        </div>
+      </div>
+      <!-- <img src="img/hero-pic.png" alt="" class="my-bg-pic" /> -->
+      <div class="bgpic-container">
+        <img src="img/my-bg-pic-removebg-preview.png" alt="" />
+      </div>
+      <!-- <div class="moving-text">Jommel Pastoral <span> - </span></div>   -->
+    </div>
+
+    <section class="projects-div container">
+      <div class="project-container cbnasia-project">
+        <div class="cbnasia-text-container">
+          <h1>CBN Asia</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil
+            iure, vero ratione exercitationem rerum possimus.
+          </p>
+        </div>
+        <div class="img-container grid-col-span-2">
+          <img src="img/laptop-cbn.png" alt="" class="laptop img-fluid" />
+          <img src="img/smartphone-cbn.png" alt="" class="smartphone img-fluid" />
+        </div>
+      </div>
+      <div class="project-container alumni-project">
+        <img src="img/Verification-App.png" alt="" class="grid-col-span-2" />
+        <div class="alumni-text-container">
+          <h1>Internship Project</h1>
+          <p>
+            Created during a University of Makati internship, the web app for
+            team, is restricted from sharing due to data sensitivity. Only
+            screenshots of the application's appearance are available.
+          </p>
+        </div>
+      </div>
+
+      <div class="sample-projects-title">Sample Projects</div>
+
+      <div
+        class="project-container sample-projects carousel slide"
+        id="carouselExampleIndicators"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/Project-1.png" alt="" class="d-block" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/Project-2.png" alt="" class="d-block" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/Project-3.png" alt="" class="d-block" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <footer class="container">
+      <div class="footer-first-row">
+        <img src="img/my-pic-circle.png" alt="" />
+        <p>Let's bring your vision <br> to life together.</p>
+      </div>
+      <div class="footer-button-row">
+        <button>Send a message</button>
+      </div>
+      <div class="copyright">© Made by Jommel Pastoral | 2023.</div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
