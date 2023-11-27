@@ -1,18 +1,24 @@
-function duplicateElement() {
-  // Get the original element
-  const originalElement = document.querySelector(".moving-text");
+const moveIns = document.querySelectorAll(".fade-in");
 
-  // Create a duplicate
-  const duplicateElement = originalElement.cloneNode(true);
+const appearOptions = {
+  threshold: 0.5
+};
 
-  // Offset the position of the duplicate
-  duplicateElement.style.position = "absolute";
-  duplicateElement.style.left =
-    originalElement.offsetLeft + originalElement.offsetWidth + "px";
+const appearOnScroll = new IntersectionObserver(function (
+  entries,
+  appearOnScroll
+) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("appear");
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+},
+appearOptions);
 
-  // Append the duplicate to the body
-  document.body.appendChild(duplicateElement);
-}
-
-// Call the function when the page loads
-document.addEventListener("DOMContentLoaded", duplicateElement);
+moveIns.forEach((moveIn) => {
+  appearOnScroll.observe(moveIn);
+});
