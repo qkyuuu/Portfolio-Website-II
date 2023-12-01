@@ -1,7 +1,15 @@
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.classList.add("disable-scrolling");
+
+  setTimeout(function () {
+    document.body.classList.remove("disable-scrolling");
+  }, 3000);
+});
+
 const moveIns = document.querySelectorAll(".fade-in");
 
 const appearOptions = {
-  threshold: 0.5
+  threshold: 0.5,
 };
 
 const appearOnScroll = new IntersectionObserver(function (
