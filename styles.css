@@ -40,7 +40,9 @@ body {
   background-color: var(--bgcolor);
 }
 .disable-scrolling {
-  overflow-y: hidden;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
 }
 p {
   font-size: 1.125rem;
@@ -254,12 +256,13 @@ nav ul li a img {
   transition: all 0.5s ease;
 }
 .left-hero-panel .social-media-container a img {
+  transition: all 0.5s ease;
   opacity: 0.8;
 }
 .left-hero-panel .social-media-container a:hover {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
-.left-hero-panel .social-media-container a:hover img{
+.left-hero-panel .social-media-container a:hover img {
   opacity: 1;
 }
 .social-media-container .slide-in-blurred-bottom:nth-child(1) {
@@ -353,10 +356,9 @@ nav ul li a img {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(12, 1fr);
-  outline: 1px solid white;
 }
 .projects * {
-  outline: 1px solid white;
+  /* outline: 1px solid white; */
 }
 /* PROJECT GENERAL STYLING */
 .cbnasia-text-container h1,
@@ -473,6 +475,11 @@ nav ul li a img {
   transform: translate(-50%, -50%);
   max-width: calc(100% - 300px);
   min-width: 400px;
+  transition: all 0.5s ease-out;
+  transform-style: preserve-3d;
+}
+.sample-project .img-container:hover .img-fluid{
+  transform: translate(-50%, -50%) scale(1.1);
 }
 .sample-projects-title {
   grid-column: span 12;
@@ -503,6 +510,9 @@ nav ul li a img {
 }
 .sample-project-2 .img-container .img-fluid {
   transform: translate(-50%, -50%) skew(10deg, 5deg);
+}
+.sample-project-2 .img-container:hover .img-fluid {
+  transform: translate(-50%, -50%) skew(0deg, 0deg) scale(1.1);
 }
 /* SAMPLE PROJECT 3 */
 .sample-project-3 {
