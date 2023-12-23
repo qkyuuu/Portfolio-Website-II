@@ -63,10 +63,9 @@ function updateRequiredStatus() {
 
 function updateInvalidFeedbackVisibility() {
   const rejectRadio1 = document.getElementById("flexRadioDefault1");
-  const rejectRadio3 = document.getElementById("flexRadioDefault3");
   const invalidFeedback = document.querySelector(".invalid-feedback");
 
-  if (rejectRadio1.checked || rejectRadio3.checked) {
+  if (rejectRadio1.checked) {
     invalidFeedback.style.display = "block";
   } else {
     invalidFeedback.style.display = "none";
