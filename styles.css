@@ -957,6 +957,10 @@ footer .footer-first-row p {
   .bgpic-container {
     opacity: 0.2;
     z-index: -1000;
+    right: -50%;
+  }
+  .left-hero-panel .social-media-container a img {
+    opacity: 1;
   }
 }
 /* MEDIA QUERY */
@@ -981,6 +985,11 @@ footer .footer-first-row p {
   }
   nav ul li a::after {
     content: "";
+  }
+  .section-title {
+    right: auto;
+    left: auto;
+    margin-left: 20px;
   }
   .projects-div {
     margin-left: 0;
