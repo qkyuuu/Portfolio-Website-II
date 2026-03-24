@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jommel Pastoral</title>
-    <link rel="icon" href="img/qq-logo.png" type="image/png">
+    <link rel="icon" href="img/qq-logo.png" type="image/png" />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -15,12 +15,12 @@
 
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="disable-scrolling">
+  <body class="disable-scrolling dev-mode">
     <nav id="navbar">
       <img src="img/qq-logo.png" alt="" class="my-logo" />
       <ul>
         <li>
-          <a href="#" data-title="HOME" class="active">
+          <a href="#home" data-title="HOME" class="active">
             <img
               src="img/icons/navbar-icons/home.png"
               alt=""
@@ -29,16 +29,7 @@
           </a>
         </li>
         <li>
-          <a href="#" data-title="ABOUT ME">
-            <img
-              src="img/icons/navbar-icons/about-me.png"
-              alt=""
-              class="nav-icon about-me"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="#" data-title="PROJECTS">
+          <a href="#projects" data-title="PROJECTS">
             <img
               src="img/icons/navbar-icons/projects.png"
               alt=""
@@ -47,7 +38,16 @@
           </a>
         </li>
         <li>
-          <a href="#" data-title="MESSAGE">
+          <a href="#aboutme" data-title="ABOUT ME">
+            <img
+              src="img/icons/navbar-icons/about-me.png"
+              alt=""
+              class="nav-icon about-me"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#contact" data-title="CONTACT ME">
             <img
               src="img/icons/navbar-icons/chat.png"
               alt=""
@@ -63,207 +63,239 @@
       <h1 class="focus-in-contract-bck">I'm Jommel <br />Pastoral</h1>
     </div>
 
-    <div class="hero-wrapper">
-      <div class="left-hero-panel">
-        <h1>I <span>develop</span> <span>design</span> website</h1>
-        <p>
-          I transform ideas into digital reality, weaving innovation and
-          creativity<br />
-          to craft engaging and immersive digital experiences.
-        </p>
-        <div class="social-media-container">
-          <a
-            href="https://www.linkedin.com/in/jommel-pastoral/"
-            class="slide-in-blurred-bottom"
-            target="_blank"
-            ><img src="img/icons/linkedin.png" alt=""
-          /></a>
-          <a href="https://www.instagram.com/_qqmelon/" class="slide-in-blurred-bottom"
-          target="_blank"
-            ><img src="img/icons/instagram.png" alt=""
-          /></a>
-          <a href="mailto:m.pastoral19@gmail.com" class="slide-in-blurred-bottom"
-            ><img src="img/icons/gmail.png" alt=""
-          /></a>
-          <a href="https://www.facebook.com/jom.Melooon/" class="slide-in-blurred-bottom"
-            ><img src="img/icons/facebook.png" alt=""
-          /></a>
-          <a href="https://github.com/qkyuuu" class="slide-in-blurred-bottom"
-            ><img src="img/icons/github.png" alt=""
-          /></a>
+    <div id="hero-scroll-container">
+      <div class="hero-wrapper" id="home">
+        <div class="left-hero-panel">
+          <h1 class="hero-title">
+            <span class="white-text">I'm <span id="article">a</span></span>
+            <span id="scramble-text">Web Developer</span>
+          </h1>
+
+          <p id="hero-description">
+            I bridge the gap between technical development and marketing
+            strategy to build high-performing, automated digital experiences.
+          </p>
+          <div class="social-media-container">
+            <a
+              href="https://www.linkedin.com/in/jommel-pastoral/"
+              class="slide-in-blurred-bottom"
+              target="_blank"
+              ><img src="img/icons/linkedin.png" alt=""
+            /></a>
+            <a
+              href="https://www.instagram.com/_qqmelon/"
+              class="slide-in-blurred-bottom"
+              target="_blank"
+              ><img src="img/icons/instagram.png" alt=""
+            /></a>
+            <a
+              href="mailto:m.pastoral19@gmail.com"
+              class="slide-in-blurred-bottom"
+              ><img src="img/icons/gmail.png" alt=""
+            /></a>
+            <a
+              href="https://www.facebook.com/jom.Melooon/"
+              class="slide-in-blurred-bottom"
+              ><img src="img/icons/facebook.png" alt=""
+            /></a>
+            <a href="https://github.com/qkyuuu" class="slide-in-blurred-bottom"
+              ><img src="img/icons/github.png" alt=""
+            /></a>
+          </div>
         </div>
+        <!-- <img src="img/hero-pic.png" alt="" class="my-bg-pic" /> -->
+        <div class="bgpic-container">
+          <img src="img/my-bg-pic-removebg-preview.png" alt="" />
+        </div>
+        <!-- <div class="moving-text">Jommel Pastoral <span> - </span></div>   -->
       </div>
-      <!-- <img src="img/hero-pic.png" alt="" class="my-bg-pic" /> -->
-      <div class="bgpic-container">
-        <img src="img/my-bg-pic-removebg-preview.png" alt="" />
-      </div>
-      <!-- <div class="moving-text">Jommel Pastoral <span> - </span></div>   -->
     </div>
 
-    <section class="projects-div">
-      <div class="cbnasia-project fade-in fade-in-left">
-        <div class="project-container">
-          <div class="cbnasia-text-container">
-            <h1>CBN Asia</h1>
-            <p>
-              A fully functional donation website for CBN Asia. To give ease to supporters and donators <br>
-              <em style="font-size: 14px;">Developed together with Jerwin Pastoral as the Backend developer and myself as the Frontend developer.</em>
+    <div class="projects-section" id="projects">
+      <div class="section-title section-2">PROJECTS & INNOVATION</div>
+      <div class="project-container">
+        <!-- PROJECT SECTION LEFT IMAGE-->
+        <div class="project project-left-img project-1 fade-in fade-in-right">
+          <div class="project-title-div project-1">
+            <p class="project-title project-1">
+              Social Triage After-care Report Generator
             </p>
-          </div>
-          <a class="img-container" href="https://cbnasia.com/give" target="_blank">
-            <img src="img/laptop-cbn.png" alt="" class="laptop img-fluid" />
             <img
-              src="img/smartphone-cbn.png"
+              src="projects/Social-Triage.png"
               alt=""
-              class="smartphone img-fluid"
+              class="project-image project-1"
             />
-          </a>
-        </div>
-        <div class="info-container">
-          <div class="prog-lang-year">
-            <div class="prog-lang">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Javascript</p>
-              <p>Bootstrap</p>
-            </div>
-            <p class="year">2023</p>
           </div>
-          <div class="position">Frontend Web Development</div>
-        </div>
-      </div>
-
-      <div class="alumni-project fade-in fade-in-right">
-        <div class="project-container">
-          <img src="img/Verification-App.png" alt="" />
-          <div class="alumni-text-container">
-            <h1>Internship Project</h1>
+          <div class="project-info project-1">
             <p>
-              Created during my University of Makati internship. This web application is used for verifying whether an individual is an alumni of the said university.
-              The preview of the application is restricted due to data sensitivity. Only
-              screenshots of the application's appearance are available.
+              A specialized data processing engine that automates the creation
+              of tracking and monitoring reports. By pulling raw social data
+              into a structured format, it allows stakeholders to easily
+              visualize engagement trends and response metrics without the
+              overhead of manual data entry.
             </p>
           </div>
         </div>
-        <div class="info-container">
-          <div class="prog-lang-year">
-            <div class="prog-lang">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Javascript</p>
-            </div>
-            <p class="year">2023</p>
+        <!-- END SECTION -->
+        <!-- PROJECT SECTION RIGHT IMAGE -->
+        <div class="project project-right-img project-2 fade-in fade-in-left">
+          <div class="project-info project-2">
+            <p>
+              A high-level analytical platform that visualizes Quality
+              Management System (QMS) performance and operational KPIs. It
+              provides real-time visibility into service health, allowing teams
+              to identify bottlenecks and maintain peak operational standards.
+            </p>
           </div>
-          <div class="position">Frontend Web Development</div>
+          <div class="project-title-div project-2">
+            <p class="project-title project-2">QUALITY MANAGEMENT SYSTEM</p>
+            <a
+              href="https://qualitymanagementsystem.azurewebsites.net/overview"
+            >
+              <img
+                src="projects/QMS.png"
+                alt=""
+                class="project-image project-2"
+              />
+            </a>
+          </div>
         </div>
-      </div>
+        <!-- END SECTION -->
+        <!-- PROJECT SECTION LEFT IMAGE-->
+        <div class="project project-left-img project-3 fade-in fade-in-right">
+          <div class="project-title-div project-3">
+            <p class="project-title project-3">Requestor Guide</p>
+            <a
+              href="https://requestorsguide-gzh8a6fph7hjdqft.southeastasia-01.azurewebsites.net/"
+            >
+              <img
+                src="projects/requestorguide.png"
+                alt=""
+                class="project-image project-3"
+              />
+            </a>
+          </div>
+          <div class="project-info project-3">
+            <p>
+              A strategic documentation tool aimed at optimizing the project
+              intake process. It guides stakeholders through providing complete
+              and accurate submission details, effectively reducing the
+              "back-and-forth" during the briefing stage and ensuring technical
+              requirements are clear from day one.
+            </p>
+          </div>
+        </div>
+        <!-- END SECTION -->
+        <!-- PROJECT SECTION RIGHT IMAGE -->
+        <div class="project project-right-img project-4 fade-in fade-in-left">
+          <div class="project-info project-4">
+            <p>
+              A robust front-end automation tool designed to transform raw text
+              into formatted code according to predefined logic and
+              architectural standards. It ensures that every output remains
+              consistent with brand guidelines and technical specifications
+              without requiring repetitive manual intervention.
+            </p>
+          </div>
+          <div class="project-title-div project-4">
+            <p class="project-title project-4">InstaFont</p>
+            <a href="https://vincezamora-7.github.io/japanchecker/">
+              <img
+                src="projects/InstaFont.png"
+                alt=""
+                class="project-image project-4"
+              />
+            </a>
+          </div>
+        </div>
+        <!-- END SECTION -->
+        <!-- PROJECT SECTION LEFT IMAGE-->
+        <div class="project project-left-img project-5 fade-in fade-in-right">
+          <div class="project-title-div project-5">
+            <p class="project-title project-5">Peer Review Guide</p>
+            <a
+              href="https://eventsprguide-fxgqhpcsgeamcyh7.southeastasia-01.azurewebsites.net/index.html"
+            >
+              <img
+                src="projects/prguide.png"
+                alt=""
+                class="project-image project-5"
+              />
+            </a>
+          </div>
+          <div class="project-info project-5">
+            <p>
+              A comprehensive framework designed to standardize the quality
+              assurance process. It provides a structured roadmap for reviewers
+              to verify technical accuracy and adherence to best practices,
+              ensuring that all outgoing assets meet a "zero-error" gold
+              standard.
+            </p>
+          </div>
+        </div>
+        <!-- END SECTION -->
 
-      <div class="sample-project sample-project-1">
-        <div class="info-container">
-          <div class="prog-lang-year">
-            <div class="prog-lang">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Javascript</p>
-              <p>Bootstrap</p>
-            </div>
-            <p class="year">2023</p>
+        <!-- PROJECT SECTION RIGHT IMAGE -->
+        <div class="project project-right-img project-6 fade-in fade-in-left">
+          <div class="project-info project-6">
+            <p>
+              An efficiency-focused utility that automates the conversion of
+              plain-text content into clean, production-ready HTML code. This
+              tool eliminates the risk of manual syntax errors and significantly
+              accelerates the development phase of email campaigns and web
+              layouts.
+            </p>
           </div>
-          <div class="position">Frontend Web Development</div>
-        </div>
-        <div class="img-container">
-          <img src="img/bg-dark-blue.jpg" alt="" class="img-bg" />
-          <img src="img/Project-3.png" alt="" class="img-fluid" />
-        </div>
-      </div>
-      <div class="sample-project sample-project-2">
-        <div class="img-container">
-          <img src="img/bg-orange-2.jpg" alt="" class="img-bg" />
-          <img src="img/Project-2.png" alt="" class="img-fluid" />
-        </div>
-        <div class="info-container">
-          <div class="prog-lang-year">
-            <div class="prog-lang">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Javascript</p>
-              <p>Bootstrap</p>
-            </div>
-            <p class="year">2023</p>
+          <div class="project-title-div project-6">
+            <p class="project-title project-6">Text-to-HTML</p>
+            <a
+              href="https://codegenxcodingpreprocessor-c9hfc0d0gsf0ebd7.eastasia-01.azurewebsites.net/"
+            >
+              <img
+                src="projects/texttohtml.png"
+                alt=""
+                class="project-image project-6"
+              />
+            </a>
           </div>
-          <div class="position">Frontend Web Development</div>
         </div>
+        <!-- END SECTION -->
       </div>
+    </div>
 
-      <div class="sample-project sample-project-3">
-        <div class="img-container">
-          <img src="img/bg-dark-blue-gray.jpeg" alt="" class="img-bg" />
-          <img src="img/Project-1.png" alt="" class="img-fluid" />
-        </div>
-        <div class="info-container">
-          <div class="prog-lang-year">
-            <div class="prog-lang">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Javascript</p>
-              <p>Bootstrap</p>
-            </div>
-            <p class="year">2023</p>
-          </div>
-          <div class="position">Frontend Web Development</div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="container">
-      <div class="footer-first-row">
-        <img src="img/my-pic-circle.png" alt="" />
+    <div class="aboutme" id="aboutme">
+      <div class="section-title section-3">ABOUT ME</div>
+      <div class="work">
         <p>
-          Let's bring your vision <br />
-          to life together.
+          I am a <span class="orange-text">Software Developer</span> and
+          <span class="orange-text">Email Marketing Specialist</span> with a
+          degree in Computer Science, driven by a passion for building things
+          from the ground up—whether it’s a high-performing digital campaign or
+          a custom engine. My professional background is rooted in technical
+          precision, where I maintain a focus on 100% error-free production
+          standards using tools like Marketo and Adobe Experience Manager (AEM).
         </p>
       </div>
-      <div class="footer-button-row">
-        <button class="ui-btn">
-          <span> Copy email </span>
-        </button>
-        <button class="ui-btn">
-          <span> Copy email </span>
-        </button>
-        <span class="main">
-          <div class="up">
-            <button class="card1">
-              <img
-                src="img/icons/facebook-colored.png"
-                alt="Facebook"
-                class="facebook-button"
-              />
-            </button>
-            <button class="card2">
-              <img
-                src="img/icons/linkedin-colored.png"
-                alt="LinkedIn"
-                class="linkedin-button"
-              />
-            </button>
-          </div>
-          <div class="down">
-            <button class="card3">
-              <img
-                src="img/icons/github-black.png"
-                alt="GitHub"
-                class="github-button"
-              />
-            </button>
-            <button class="card4">
-              <img src="img/icons/instagram-colored.png" alt="Instagram" />
-            </button>
-          </div>
-        </span>
+      <div class="outside-work">
+        <p>
+          Outside of the digital world, my creativity shifts to the garage. I
+          have a
+          <span class="orange-text"
+            >deep love for classic motorcycle customization</span
+          >, where I focus on aesthetic modifications. For me, building a
+          website and modifying a bike share the same DNA: it’s all about taking
+          a raw concept and refining every detail until it’s both functional and
+          a work of art.
+        </p>
       </div>
-      <div class="copyright">© Made by Jommel Pastoral | 2023.</div>
-      <div class="footer-cover">
-        <p>WORK IN PROGRESS!!!</p>
+    </div>
+
+    <footer class="container" id="contact">
+      <div class="social-texts">
+        <div class="socials">LinkedIn</div>
+        <div class="socials">Email</div>
+        <div class="socials">Facebook</div>
+        <div class="socials">Instagram</div>
       </div>
     </footer>
 
