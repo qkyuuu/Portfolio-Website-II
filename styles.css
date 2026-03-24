@@ -223,12 +223,11 @@ nav ul li a img {
   width: 32px;
 }
 #hero-scroll-container {
-  height: 200vh;
-  background-color: var(--bgcolor);
-}
-#hero-scroll-container {
-  height: 200vh;
-  background-color: var(--bgcolor);
+  position: relative;
+  width: 100%;
+  height: 200vh; /* This is your scroll "runway" */
+  margin: 0;
+  padding: 0;
 }
 
 .hero-wrapper {
@@ -432,7 +431,7 @@ section,
   font-family: Bebas, sans-serif;
   color: var(--red-orange);
   z-index: -1000;
-  font-size: clamp(4rem, 5vw + 0.5rem, 12rem);
+  font-size: clamp(3rem, 5vw + 0.5rem, 12rem);
 }
 .section-2 {
   right: 250px;
@@ -843,6 +842,10 @@ footer .footer-first-row p {
   gap: 20px;
   align-items: center;
 }
+.social-texts a {
+  text-decoration: none;
+  color: var(--red-orange);
+}
 .socials {
   font-size: 20px;
   color: var(--red-orange);
@@ -948,16 +951,24 @@ footer .footer-first-row p {
 }
 
 @media screen and (max-width: 1000px) {
+  body,
+  html {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  #hero-scroll-container {
+    margin-top: 0 !important;
+  }
   .social-media-container {
     flex-direction: row;
   }
   .left-hero-panel {
+    margin-top: 300px;
     width: 100%;
   }
   .bgpic-container {
     opacity: 0.2;
-    z-index: -1000;
-    right: -50%;
+    right: -10%;
   }
   .left-hero-panel .social-media-container a img {
     opacity: 1;
