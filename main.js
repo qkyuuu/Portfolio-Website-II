@@ -83,9 +83,9 @@ class TextScramble {
 // --- Implementation ---
 
 const phrases = [
+  "Web Designer",
   "Email Marketer",
   "Web Developer",
-  "Web Designer",
   "Content Creator",
 ];
 
