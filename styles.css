@@ -879,6 +879,7 @@ footer .footer-first-row p {
   display: flex;
   justify-content: center;
   gap: 20px;
+  position: relative;
 }
 .project-title-div {
   display: flex;
@@ -918,6 +919,17 @@ footer .footer-first-row p {
 .project-right-img .project-info p {
   text-align: end;
   padding-left: 10%;
+}
+.project-tenure-note {
+  display: block; /* Forces the note to a new line */
+  font-family: "Jost", sans-serif;
+  font-size: 1rem; /* Keeps it smaller than the main description */
+  opacity: 0.6; /* Makes it subtle so it doesn't distract */
+  font-style: italic;
+  margin-top: 15px; /* Creates space between the desc and the note */
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  color: white; /* Ensures visibility on dark background */
 }
 @media screen and (max-width: 1470px) {
   .left-hero-panel {
