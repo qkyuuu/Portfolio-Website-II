@@ -14,7 +14,27 @@
   color: white;
   font-family: sans-serif;
 }
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+  width: 2px;
+}
 
+/* The background track */
+::-webkit-scrollbar-track {
+  background: var(--bgcolor); 
+}
+
+/* The draggable handle - Default Gray */
+::-webkit-scrollbar-thumb {
+  background: #555; /* A subtle gray */
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+/* This class will be toggled by JS when scrolling */
+.scrolling-active::-webkit-scrollbar-thumb {
+  background: var(--red-orange);
+}
 @font-face {
   font-family: "Big Shoulder";
   src: url(fonts/Big_Shoulders_Text/static/BigShouldersText-Regular.ttf);
